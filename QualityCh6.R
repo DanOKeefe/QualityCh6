@@ -22,7 +22,7 @@ summary(R_flow_data_graph1$limits) # all the same control limits bc sample sizes
 # So do the same analysis, but only use the first 5 datapoints from the 10th sample.
 
 Data1Edited <- Data1
-Data1Edited[10,6:10] = NA  # removed last 5 elements from row 10. (in columns 6 through 10 inclusive)
+Data1Edited[10,6:10] <- NA  # removed last 5 elements from row 10. (in columns 6 through 10 inclusive)
 Data1Edited # check to make sure NA values are correctly implemented
 
 xbar_flow_data_graph1Edited <- qcc(data = Data1Edited, type = "xbar")
