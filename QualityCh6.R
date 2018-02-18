@@ -8,7 +8,7 @@ library(qcc)
 
 Data1 <- within(read.csv(file="Q1Data.csv", header=T, sep=","), rm('X')) # removed the X column in the csv file
 xbar_flow_data_graph1 <- qcc(data = Data1, type = "xbar")
-s_piston_data_chart1 = qcc(data = Data1, type = "S")
+s_piston_data_chart1 <- qcc(data = Data1, type = "S")
 
 # Set up an R chart, and compare with the s chart in part (a)
 R_flow_data_graph1 <- qcc(Data1, type = "R")
@@ -26,7 +26,7 @@ Data1Edited[10,6:10] = NA  # removed last 5 elements from row 10. (in columns 6 
 Data1Edited # check to make sure NA values are correctly implemented
 
 xbar_flow_data_graph1Edited <- qcc(data = Data1Edited, type = "xbar")
-s_piston_data_chart1Edited = qcc(data = Data1Edited, type = "S")
+s_piston_data_chart1Edited <- qcc(data = Data1Edited, type = "S")
 R_flow_data_graph1Edited <- qcc(Data1Edited, type = "R")
 
 # Answer: the control limits for the 10th sample are more spread out because only 5 datapoints are analyzed.
@@ -99,7 +99,7 @@ qplot(CombinedP4, binwidth = 50) # it does not appear normally distributed
 xbar_flow_data_graphP4 <- qcc(data = Data4P1, type = "xbar") # says group size must be larger than one.
 
 # change Data4P1 to make 4 groups of size n = 5
-Data4P1Resized = matrix(Data4P1, 4, 5)
+Data4P1Resized <- matrix(Data4P1, 4, 5)
 Data4P1Resized
 
 xbar_flow_data_graphP4 <- qcc(data = Data4P1Resized, type = "xbar")
